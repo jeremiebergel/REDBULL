@@ -1,15 +1,22 @@
 <?php
-session_start();
+    require 'inc/functions.php';
+    only_connected_people();
+    require 'inc/header.php';
+    require_once 'inc/connect.php';
+    $requete= $pdo->prepare('SELECT `id`, `username`, `email`, `password` FROM `users` WHERE 1');
 
-require 'inc/functions.php'; ?>
+    // On éxécute la requete SQL
+    $requete->execute();
+
+    while($row = $requete->fetch(PDO::FETCH_ASSOC)):
+
+// On stock le résultat de la requete SQL dans une variable qu'on va réutilisé pour afficher les
+// index de notre requete EX: Id, nom, prenom agge
+?>
 
 
-<?php require 'inc/header.php'; ?>
+    <h1>Bonjour <?=$row['username']?></h1>
 
-<h1>Votre compte</h1>
+<?php endwhile; ?>
 
-<?php debug($_SESSION); ?>
-
-<?php require 'inc/footer.php';?>
-
-
+<?php require 'inc/footer.php'; ?>
