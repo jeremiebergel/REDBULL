@@ -1,6 +1,5 @@
 <?php
 
-echo 'test';
 require_once "espacemembre/inc/functions.php";
 // je démarre ma session
 session_start();
