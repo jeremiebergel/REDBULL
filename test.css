@@ -1,0 +1,46 @@
+#unityPlayer {
+    width: 70%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.btnbis {
+    background: green;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.article img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-top: 50px;
+}
+#shareBtn{
+    background: #4267B2;
+    display: inline-block;
+    line-height: 20px;
+    padding: 2px 7px;
+    border-radius: 7px;
+}
+#shareBtn span,
+#shareBtn img{
+    display: inline-block;
+    color: #fff;
+    font-family: 'helvetica Neue';
+    font-size: 12px;
+}
+#shareBtn span:nth-of-type(2){
+    margin: 0 5px;
+}
+#shareBtn span:nth-of-type(3){
+
+}
+#shareBtn span img{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+}
