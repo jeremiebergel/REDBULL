@@ -3,7 +3,7 @@
     only_connected_people();
     require 'inc/header.php';
     require_once 'inc/connect.php';
-    $requete= $pdo->prepare('SELECT `id`, `username`, `email`, `password` FROM `users` WHERE 1');
+    $requete= $pdo->prepare('SELECT `id`, `username`, `email`, `password`, `img` FROM `users` WHERE 1');
 
     // On éxécute la requete SQL
     $requete->execute();
@@ -14,8 +14,9 @@
 // index de notre requete EX: Id, nom, prenom agge
 ?>
 
-
     <h1>Bonjour <?=$row['username']?></h1>
+    <p>Joli vélo</p>
+    <img class="img-thumbnail" alt="" src="<?=$row['img']?>" data-holder-rendered="true">
 
 <?php endwhile; ?>
 
