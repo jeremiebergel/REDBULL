@@ -11,3 +11,5 @@ require 'inc/functions.php'; ?>
 <?php debug($_SESSION); ?>
 
 <?php require 'inc/footer.php';?>
+
+

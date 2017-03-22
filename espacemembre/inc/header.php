@@ -36,25 +36,35 @@ if (session_status() == PHP_SESSION_NONE){
           <a class="navbar-brand" href="#">Redbull</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="register.php">S'inscrire</a></li>
-            <li><a href="../login.php">Se connecter</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+            <ul class="nav navbar-nav">
+
+                <?php if (isset($_SESSION['authentification'])): ?>
+
+              <li><a href="../logout.php">Se Déconnecter</a></li>
+              <?php else: ?>
+
+                <li><a href="../register.php">S'inscrire</a></li>
+                <li><a href="../login.php">Se connecter</a></li>
+                <?php endif; ?>
+           </ul>
+          </div><!--/.nav-collapse -->
+
       </div>
     </nav>
 
     <div class="container">
         <?php
         // est-ce que j'ai quelque chose dans cette clé flash
-        if (isset($_SESSION['flash']))?>
-         <?php foreach($_SESSION['flash'] as $type => $message): ?>
+        if (isset($_SESSION['flash'])): ?>
+
+          <?php foreach($_SESSION['flash'] as $type => $message): ?>
+
             <div class="alert alert-<?= $type; ?>">
 
                 <?= $message; ?>
 
             </div>
          <?php endforeach; ?>
-        <?php endif; ?>
+        <?php unset($_SESSION['flash']); ?>
 
-
+      <?php endif; ?>

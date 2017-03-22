@@ -1,6 +1,8 @@
 <?php
 
 require_once "inc/functions.php";
+// je démarre ma session
+session_start();
  /*on se connecte à la BDD*/
 require_once "inc/connect.php";
 
@@ -20,6 +22,7 @@ if (!empty($_POST)){
         $requete = $pdo->prepare('SELECT id FROM users WHERE username = ?');
         $requete->execute([$_POST['username']]);
         $user = $requete->fetch();
+
         if ($user){
             $errors['username'] = "Ce pseudo est déjà pris";
         }
@@ -51,15 +54,17 @@ if (!empty($_POST)){
         $pop = $token;
         $requete = $pdo->prepare($sql);
 
-        $requete->bindValue(':password', hash('sha512', $_POST['password']), PDO::PARAM_STR);
+        $requete->bindValue(':password', sha1($_POST['password']), PDO::PARAM_STR);
         $requete->bindValue(":username", $_POST ['username']);
         $requete->bindValue(":email", $_POST ['email']);
         $requete->bindValue(":confirmation_token", $token, PDO::PARAM_STR);
         $requete->execute();
         $user_id = $pdo->lastInsertId();
 
-        mail($_POST['email'], 'confirmation de votre mail', "Afin de valider votre compte merci de cliquer sur ce lien\n\n http://localhost/inc/confirm.php?id=$user_id&confirmation_token=$pop");
-        header('Location : inc/login.php');
+        header('Location: login.php');
+        mail($_POST['email'], 'confirmation de votre mail', "Afin de valider votre compte merci de cliquer sur ce lien\n\n http://localhost/confirm.php?id=$user_id&confirmation_token=$pop");
+        $_SESSION['flash']['success'] = "Un email de confimation vous a été envoyé pour valider votre compte.";
+
         // Le script s'arrete à ce point là
         exit();
 
