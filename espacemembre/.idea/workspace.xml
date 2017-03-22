@@ -123,11 +123,11 @@
       <file leaf-file-name="account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="285">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
-                <marker date="1490193446000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
-                <marker date="1490193446000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
+                <marker date="1490196590000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
+                <marker date="1490196590000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
               </folding>
             </state>
           </provider>
@@ -313,12 +313,12 @@
       <updated>1489941783605</updated>
       <workItem from="1489941784873" duration="899000" />
       <workItem from="1489945959895" duration="27269000" />
-      <workItem from="1490172548593" duration="14617000" />
+      <workItem from="1490172548593" duration="14739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42785000" />
+    <option name="totallyTimeSpent" value="42907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="435" width="1415" height="474" extended-state="0" />
@@ -468,8 +468,8 @@
         <state relative-caret-position="150">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
-            <marker date="1490193446000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
-            <marker date="1490193446000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
+            <marker date="1490196590000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
+            <marker date="1490196590000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
           </folding>
         </state>
       </provider>
@@ -616,11 +616,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="285">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
-            <marker date="1490193446000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
-            <marker date="1490193446000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
+            <marker date="1490196590000" expanded="true" signature="163:228" ph="SELECT `id`,... users" />
+            <marker date="1490196590000" expanded="true" signature="163:230" ph="SELECT : `id... users" />
           </folding>
         </state>
       </provider>

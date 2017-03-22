@@ -16,7 +16,7 @@
 
 
     <h1>Bonjour <?=$row['username']?></h1>
-    
+
 <?php endwhile; ?>
 
 <?php require 'inc/footer.php'; ?>
