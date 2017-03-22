@@ -10,3 +10,18 @@
             //
             return substr(str_shuffle(str_repeat($alphabet, $lengh)), 0, $lengh);
         };
+
+
+        function only_connected_people(){
+            if (session_status() == PHP_SESSION_NONE){
+                session_start();
+            }
+
+            if(!isset($_SESSION['authentification'])){
+
+                $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page";
+                header('Location: login.php');
+                exit();
+            }
+
+        }
