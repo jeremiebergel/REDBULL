@@ -1,7 +1,7 @@
 
 /* Pour ne pas créer de conflits de class :
 - on commence le nom de chaque class par le nom de la page sur laquelle on travail :
-exemple :     class="index-menu-burger" */ 
+exemple :     class="index-menu-burger" */
 
 /* si possible, le nom des class en anglais */
 
@@ -15,9 +15,20 @@ exemple :     class="index-menu-burger" */
 }
 *,
 *:before,
-*:after{
+*:after {
 	box-sizing: border-box;
 }
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
 ul{
 	list-style-type: none;
 }
@@ -46,16 +57,16 @@ div.container-large{
 .closed{
 	visibility: hidden;
 }
-body {
+div.container-background {
 	position: relative;
 	height:100vh;
 	background: rgba(0, 0, 0, 0.82) url('../img/background.jpg') no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: center -60px;
 	font-family: 'Fjalla One', sans-serif;
 }
 
-body:before {
+div.container-background:before {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -70,6 +81,7 @@ header {
 	position: relative;
 	z-index: 2;
 	overflow: hidden;
+	height: 120px;
 }
 
 header h1 {
@@ -314,3 +326,86 @@ header a {
 	color: white;
 	line-height: 38px;
 }
+
+
+
+/*------ RANKING PAGE ------*/
+
+body.connected {
+	background: none;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+header.connected {
+	height: 68px;
+}
+
+header.connected img {
+	margin-top: 4px;
+	width: 19%;
+	height: 60px;
+}
+
+header.connected a {
+	font-size: 15px;
+}
+
+.profil-name {
+	float: left;
+	margin: 10% 0 0 10%;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #DE2746;
+}
+
+h1 {
+	padding-bottom: 20%;
+}
+
+.bike-info {
+	float: left;
+	margin: 5% 0 0 15%;
+}
+
+.heart {
+	display: block;
+	width: 6%;
+	margin-left: 24%;
+}
+
+.social-result {
+	float: left;
+	margin: 10% 0 0 10%;
+	text-align: center;
+}
+
+.social-p {
+	padding-bottom: 10%;
+	font-size: 1.1em;
+}
+
+.social-n {
+	color: #DE2746;
+	font-size: 1.2em;
+}
+
+.like {
+	padding-bottom: 30%;
+}
+
+.heart {
+	width: 4%;
+}
+
+.face {
+	width: 4%;
+}
+
+.twittos {
+	width: 4%;
+}
+
+
+
