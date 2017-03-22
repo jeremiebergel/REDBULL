@@ -1,0 +1,45 @@
+
+/* Pour ne pas créer de conflits de class :
+- on commence le nom de chaque class par le nom de la page sur laquelle on travail :
+exemple :     class="index-menu-burger" */ 
+
+/* si possible, le nom des class en anglais */
+
+/* on crée chacun une branche sur git. Et on fera des push régulièrement sur le master */
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+
+/* TOUT LES ELEMENTS QUI FONT WIDTH 100% SONT EN DEHORS DE LA BALISE MAIN */
+main{
+	max-width: 100%;
+}
+
+/* UTILISER LA DIV CLASS CONTAINER POUR CENTRER LES ELEMENTS SUR LA PAGE */
+
+/* SUR UNE LARGEUR DE 1440PX */
+div.container-small{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/* SUR TOUTE LA LARGEUR DE LA PAGE */
+div.container-large{
+	max-width: 100%;
+}
