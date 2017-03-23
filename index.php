@@ -130,6 +130,7 @@ if (!empty($_POST)){
 		<meta property="og:image" content="http://www.monatest.esy.es/test.html" />
 </head>
 <body>
+
 	<script>
 	window.fbAsyncInit = function() {
 	FB.init({
@@ -173,7 +174,7 @@ if (!empty($_POST)){
 		<h1><img src="img/logo.png"></h1>
 		<a href="#">Sign in</a>
 	</header>
-
+<div class="container-background">
 	<main>
 		<div class="wrapper">
 			<h2>Custom your bike</h2>
@@ -182,8 +183,10 @@ if (!empty($_POST)){
 			<p class="date">July 13th-16th, 2017</p>
 			<p class="cta"><a href="#">Star your custom</a></p>
 		</div>
-		<div class="create-acc">
-			BONJOUR
+		<div class="mg-create-acc">
+			<div class="mg-popup">
+				
+			</div>
 		</div>
 	</main>
 
@@ -192,8 +195,8 @@ if (!empty($_POST)){
 			<img src="img/logo-black.png" alt="">
 			<img class="cross" src="img/cross.svg">
 			<p class="create">Créer votre compte</p>
-			<input type="email" placeholder="e-mail">
-			<input type="password" placeholder="mot de passe">
+			<input type="email" placeholder="E-mail">
+			<input type="password" placeholder="Password">
 			<div class="checkbox">
 				<input type="checkbox" id="keep"><label for="keep">Rester connecté</label>
 				<p>Mot de passe oublié</p>
@@ -218,7 +221,7 @@ if (!empty($_POST)){
 	<footer>
 		
 	</footer>
-
+</div>
 	<script src="js/main.js"></script>
 </body>
 </html>
