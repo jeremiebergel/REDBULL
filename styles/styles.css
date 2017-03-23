@@ -1,0 +1,515 @@
+
+/* Pour ne pas créer de conflits de class :
+- on commence le nom de chaque class par le nom de la page sur laquelle on travail :
+exemple :     class="index-menu-burger" */
+
+/* si possible, le nom des class en anglais */
+
+/* on crée chacun une branche sur git. Et on fera des push régulièrement sur le master */
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+
+/* TOUT LES ELEMENTS QUI FONT WIDTH 100% SONT EN DEHORS DE LA BALISE MAIN */
+main{
+	max-width: 100%;
+}
+
+/* UTILISER LA DIV CLASS CONTAINER POUR CENTRER LES ELEMENTS SUR LA PAGE */
+
+/* SUR UNE LARGEUR DE 1440PX */
+div.container-small{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/* SUR TOUTE LA LARGEUR DE LA PAGE */
+div.container-large{
+	max-width: 100%;
+}
+.closed{
+	visibility: hidden;
+}
+div.container-background {
+	position: relative;
+	height:100vh;
+	background: rgba(0, 0, 0, 0.82) url('../img/background.jpg') no-repeat;
+	background-size: cover;
+	background-position: center -60px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+div.container-background:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: inherit;
+	content: ' ';
+}
+
+header {
+	background: rgba(21, 20, 20, 62);
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	height: 120px;
+}
+
+header h1 {
+	text-align: center;
+	width: 600px;
+	position: relative;
+	left:50%;
+	margin-left: -300px;
+	display: inline-block;
+}
+
+header h1 img {
+	height: 80px;
+	margin-top: 20px;
+}
+
+header a {
+	margin-right: 30px;
+	margin-top: 30px;
+	color: white;
+	font-size: 20px;
+	float: right;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.wrapper {
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	padding-top: 30px;
+	text-shadow: 2px 2px 4px black;
+	letter-spacing: 2px;
+}
+
+.wrapper h2 {
+	text-align: center;
+	color: rgba(221, 7, 65, 100);
+	font-size: 90px;
+	margin-bottom: 40px;
+}
+
+.wrapper p {
+	color: rgba(221, 7, 65, 100);
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.wrapper h3 {
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.date {
+	font-size: 30px;
+}
+
+.cta {
+	text-align: center;
+	color: white;
+}
+
+.cta a {
+	color: white;
+	font-size: 20px;
+	width: 100px;
+	border: solid white 1px;
+	padding: 5px 15px;
+}
+
+.wrapper-popup {
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+
+.popup {
+	background-color: rgb(248, 248, 248);
+	width:40%;
+	position: relative;
+	top:50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	height: 95vh;
+	padding-top: 60px;
+	font-family: "Helvetica Neue";
+}
+
+.create {
+	font-family: "Helvetica";
+	font-weight: bold;
+}
+.popup img{
+	width: 125px;
+	display: block;
+	margin: 0 auto;
+}
+.popup>p{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 25px;
+	margin-top: 30px;
+	color: rgba(29, 20, 20, 100);
+	line-height: 150%;
+}
+.popup input{
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+	width: 70%;
+}
+.popup input:nth-of-type(1){
+	margin-top: 30px;
+}
+.popup input:nth-of-type(2){
+	margin-top: 10px;
+}
+
+.popup label {
+	color: rgb(159, 159, 159);
+}
+.popup div.checkbox{
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.popup .cross {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.checkbox p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: rgb(159, 159, 159);
+	text-transform: none;
+	font-size: 16px;
+	font-family: "Helvetica Neue";
+	margin-top: 30px;
+	font-weight: 200;
+}
+
+.checkbox label {
+	font-size: 16px;
+	font-family: "Helvetica Neue";
+	font-weight: 200;
+}
+
+.popup div.checkbox input,
+.popup div.checkbox label{
+	display: inline-block;
+}
+.popup div.checkbox p{
+	float: right;
+}
+.popup div.checkbox input[type="checkbox"]{
+	width: 10px;
+	height:10px;
+	margin-right: 10px;
+}
+.popup div.checkbox input{
+	width: 20%;
+}
+
+.social {
+	width: 70%;
+	line-height: 24px;
+}
+
+.social p {
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+	line-height: 38px;
+}
+
+.connect {
+	display: block;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.97);
+	margin-top: 30px;
+}
+
+.connect p {
+	color: white;
+	font-family: "Helvetica Neue";
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.fb {
+	display: block;
+	margin: 13px auto;
+	background: rgb(59, 89, 152);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.fb div {
+	margin: 6.5px 0 0 5px;
+	float: left;
+	width: 15px;
+}
+
+.fb p {
+	color: white;
+	line-height: 38px;
+}
+
+.twitter {
+	display: block;
+	margin: 0 auto;
+	background: rgb(59, 89, 152);
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+.twitter div {
+	margin: 6.5px 0 0 5px;
+	float: left;
+	width: 15px;
+}
+
+.twitter p {
+	color: white;
+	line-height: 38px;
+}
+
+
+
+/*------ RANKING PAGE ------*/
+
+body.connected {
+	background: none;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+header.connected {
+	height: 68px;
+}
+
+header.connected img {
+	margin-top: 4px;
+	width: 19%;
+	height: 60px;
+}
+
+header.connected a {
+	font-size: 15px;
+}
+
+.profil-name {
+	float: left;
+	margin: 10% 0 0 12%;
+}
+
+h2, h3 {
+	font-family: "Helvetica Neue";
+	text-align: center;
+	color: #DE2746;
+}
+
+h2 {
+	padding-bottom: 20%;
+}
+
+.bike-info {
+	float: left;
+	margin: 5% 0 0 13%;
+}
+
+.icon-social {
+	display: block;
+	padding-left: 4%;
+}
+
+.icon {
+	float: left;
+	margin-left: 15%;
+}
+
+.heart {
+	width: 3%;
+}
+
+.face {
+	width: 5%;
+}
+
+.twittos {
+	width: 5%;
+}
+
+.heart {
+	display: block;
+	width: 6%;
+	margin-left: 24%;
+}
+
+.social-result {
+	float: left;
+	margin: 10% 0 0 10%;
+	text-align: center;
+}
+
+.social-bar{
+	width: 100%;
+	height: 1px;
+	background: #151414;
+}
+
+.social-p {
+	padding-bottom: 10%;
+	font-size: 1.1em;
+}
+
+.social-n {
+	color: #DE2746;
+	font-size: 1.3em;
+}
+
+.like {
+	padding-bottom: 25%;
+
+}
+
+.share {
+	padding-top: 25%;
+}
+
+/*------- PROFIL PAGE -------*/
+
+.profil-name-jb{
+	float: left;
+	text-align: center;
+	margin: 3% 0 0 10%;
+}
+
+.profil-name-jb>h2,
+.profil-name-jb>h3 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.profil-name-jb>h2 {
+	color: #151414;
+	padding-bottom: 5%;
+}
+
+.profil-name-jb>h3 {
+	color: #DE2746;
+}
+
+.bike-info-jb {
+	float: left;
+	margin: 2% 0 0 11%;
+}
+
+.social-result-jb {
+	margin: 3% 0 0 9%;
+}
+
+.social-bar-jb{
+	width: 1px;
+	height: 80px;
+	background: #151414;
+
+}
+
+.info-perso-bar{
+	display: inline-block;
+	text-align: center;
+	margin-left:  10%;
+}
+
+.info-perso {
+	display: inline-block;
+	text-align: center;
+	margin:0 0 10% 10%;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.social-p-jb {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.ranking .social-p-jb {
+	padding-bottom: 20%;
+	font-size: 1.8em;
+
+}
+.like-jb .social-p-jb {
+	padding-bottom: 39%;
+	font-size: 1.8em;
+
+}
+
+.share-jb .social-p-jb {
+	padding-bottom: 44% ;
+	font-size: 1.8em;
+
+}
+
+.social-n-jb {
+	font-size: 2.3em;
+	color: #DE2746;
+	padding-bottom: 60%;
+}
+
+.ranking-general {
+	float: right;
+	margin: 11.5% 3% 0 0;
+	border-bottom: 2px solid #151414;
+}
+
