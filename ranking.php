@@ -1,29 +1,15 @@
 <?php
-
-// je recupere la page demandee
-if (isset($_GET['users'])) {
-    // j'ai la page demandee dans l'url
-    $slug = $_GET['users'];
-} else {
-    // pas de page demandee, j'affiche la page par defaut
-    $slug = 'index';
-}
-//$slug = $_GET['page'] ?? 'teletubbies';
-// je selectionne les donnees dont j'ai besoin
-// bind de la value de slug
-
 require_once 'espacemembre/inc/functions.php';
+
 require_once 'espacemembre/inc/connect.php';
 
-$requete= $pdo->prepare('SELECT `id`, `username`, `email`, `password`, `img`, `like`, `partage` FROM `users` WHERE `slug` =:slug');
-
+$requete= $pdo->prepare('SELECT `id`, `username`, `email`, `password`, `img`, `like`, `partage` FROM `users` WHERE `id` = 1');
 // On éxécute la requete SQL
 $requete->execute();
 
-while($row = $requete->fetch(PDO::FETCH_ASSOC)):
 // On stock le résultat de la requete SQL dans une variable qu'on va réutilisé pour afficher les
 // index de notre requete EX: Id, nom, prenom agge
-    ?>
+?>
 
 
 
@@ -38,11 +24,11 @@ while($row = $requete->fetch(PDO::FETCH_ASSOC)):
 
 
 <body class="connected">
-    <div class="big-container">
-        <header class="connected">
-            <h1><img src="img/logo.png"></h1>
-            <a href="#">Se Déconnecter</a>
-            <a href="#">Masis31</a>
+<div class="big-container">
+    <header class="connected">
+        <h1><img src="img/logo.png"></h1>
+        <a href="#">Se Déconnecter</a>
+        <a href="#">Masis31</a>
 
     </header>
 
@@ -51,6 +37,7 @@ while($row = $requete->fetch(PDO::FETCH_ASSOC)):
         </div>
 
         <div class="content-profil clearfix">
+            <?php $row = $requete->fetch(PDO::FETCH_ASSOC) ?>
             <img class="arrow-left" src="img/back.png" alt="">
 
 
@@ -80,9 +67,14 @@ while($row = $requete->fetch(PDO::FETCH_ASSOC)):
                     <p class="social-p">PARTAGE</p>
                     <p class="social-n"><?=$row['partage']?></p>
                 </div>
+
             </div>
+
             <img class="arrow-right" src="img/next.png" alt="">
+
         </div>
+
+
 
         <div class="ranking">
             <p>Classement général</p>
@@ -139,8 +131,13 @@ while($row = $requete->fetch(PDO::FETCH_ASSOC)):
                 </li>
             </ul>
         </div>
-        <?php endwhile; ?>
+
+
+
+
     </main>
+
+
 </div>
 </body>
 </html>
