@@ -6,7 +6,7 @@
         // si ces informations ont été saisies par l'utilisateur
         // on va faire appel à la BDD
         require_once 'inc/connect.php';
-
+        session_start();
         // on exécute notre requete
         // Sélectionne le pseudo et l'email où l'utilisateur est égal au paramètre username
         $requete= $pdo->prepare('SELECT email, username, password FROM users WHERE ((username = :username OR email = :username) AND confirmed_at IS NOT NULL) AND password =:password');
@@ -21,7 +21,12 @@
         if($requete->rowCount() >=1) {
 
             $_SESSION['authentification'] = $user;
+
+            $_SESSION['flash']['success'] = "Vous êtes maintenant connecté";
+
+
             header('Location: account.php');
+
             exit();
 
         } else {
@@ -46,7 +51,7 @@
 
         <div class="form-group">
 
-            <label for="">Mot de passe</label>
+            <label for="">Mot de passe <a href="forget.php">(J'ai oublié mon mot de passe)</a></label>
             <input type="password" name="password" class="form-control"/>
 
         </div>

@@ -8,6 +8,6 @@ unset($_SESSION['authentification']);
 // on stock un message flash
 $_SESSION['flash']['success'] = 'vous êtes maintenant déconnecté ';
 
+?>
 
-
-header('Location : login.php');
+<?php require_once "inc/header.php"?>
