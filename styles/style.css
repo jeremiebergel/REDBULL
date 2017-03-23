@@ -364,6 +364,16 @@ header.connected a {
 	width: 100%;
 	margin-top: 30px;
 }
+.content-profil .arrow-left{
+	float: left;
+	width: 3%;
+	margin: 150px 0 0 30px;
+}
+
+.content-profil .arrow-right{
+	width: 3%;
+	margin: 150px 30px 0 0;
+}
 .content-profil .profil-name,
 .content-profil .bike-info,
 .content-profil .social-result{
@@ -371,18 +381,23 @@ header.connected a {
 }
 .content-profil .profil-name,
 .content-profil .social-result{
-	width: 20%;
-	/*color: #DE2746;*/
+	width: 10%;
 }
 .content-profil .profil-name {
+	text-align: center;
 	color: #DE2746;
 	font-family: 'Fjalla One';
 	font-size: 22px;
 	font-family: 'Helvetica Neue';
 	font-weight: 100;
+	padding-left: 90px;
+}
+.content-profil .profil-name h1{
+	margin-left: 40%;
 }
 .content-profil .social-result{
 	font-size: 26px;
+	padding-right: 90px;
 }
 .content-profil .social-result .like p:nth-of-type(2),
 .content-profil .social-result .share p:nth-of-type(2){
@@ -390,10 +405,10 @@ header.connected a {
 	/*font-size: 26px;*/
 }
 .content-profil .social-result .like{
-	margin-bottom: 20px;r
+	margin-bottom: 20px;
 }
 .content-profil .bike-info{
-	width: 60%;
+	width: 70%;
 }
 .bike-info>ul{
 	position: absolute;
@@ -411,8 +426,8 @@ header.connected a {
 }
 .bike-info>ul li img{
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 }
 .bike-info>ul li:nth-of-type(1){
 	margin-right: 50px;
@@ -423,11 +438,11 @@ header.connected a {
 .mg-bike img{
 	display: block;
 	margin: 0 auto;
-	width: 650px;
+	width: 700px;
 }
 
 .mg-bike{
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 .content-profil .profil-name,
 .content-profil .social-result{
@@ -435,13 +450,13 @@ header.connected a {
 	margin: 7% 0;
 }
 .content-profil .social-result .social-bar{
-	margin-left: 29%;
-	width: 40%;
+	margin-left: 5%;
+	width: 100%;
 	height: 2px;
 	background-color: #222;
 }
 .content-profil .social-result .share{
-	margin-top: 7%;
+	margin-top: 30%;
 }
 .ranking{
 	width: 100%;
