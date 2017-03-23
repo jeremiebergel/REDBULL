@@ -172,7 +172,8 @@ if (!empty($_POST)){
 	</script>
 	<header>
 		<h1><img src="img/logo.png"></h1>
-		<a href="#">Sign in</a>
+        <a class="signin" href="#">Sign in</a>
+		<a class="termes" href="#">Le Concours</a>
 	</header>
 <div class="container-background">
 	<main>
@@ -190,6 +191,45 @@ if (!empty($_POST)){
 		</div>
 	</main>
 
+
+	<footer>
+
+	</footer>
+</div>
+    <div class="wrapper-popup-concours closed">
+        <div class="popup-concours">
+            <img class="pop-cross" src="img/cross-bold.svg" alt="">
+            <img class="cross" src="img/cross.svg">
+            <div class="lots">
+                <img src="img/logo.png">
+                <p>Jeu concours</p>
+                <h3>Custom your bike</h3>
+                <p>Joue et tente de gagner:</p>
+                <ul>
+                    <li class="clearfix">
+                        <p>1<sup>er</sup></p>
+                        <p>Un voyage pour les XGAMES et ton vélo customisé</p>
+                    </li>
+                    <li class="clearfix">
+                        <p>2<sup>e</sup></p>
+                        <p>Ton vélo customisé et un drone</p>
+                    </li>
+                    <li class="clearfix">
+                        <p>3<sup>e</sup></p>
+                        <p>Ton vélo customisé</p>
+                    </li>
+                </ul>
+                <p>Les <span class="color-red">50 suivants gagnent </span>des T-shirts et des goodies Redbull</p>
+            </div>
+            <div class="reglement">
+                <img src="img/unity.png">
+                <p>Règlement <br>du jeu</p>
+                <p>Télécharge le réglement du jeu ici</p>
+                <a href="#"><img src="img/download.png"></a>
+            </div>
+        </div>
+    </div>
+
 	<div class="wrapper-popup closed">
 		<div class="popup">
 			<img src="img/logo-black.png" alt="">
@@ -205,7 +245,7 @@ if (!empty($_POST)){
 				<p>Connexion</p>
 			</a>
 			<a class="social fb" href="#">
-			
+
 				<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" fill="#fff" /></svg></div>
 				<fb: class="btnbis" loggin-button scope="public_profile,email" onclick="login()" id="login"><p>FACEBOOK</p></fb: loggin-button>
 
@@ -217,11 +257,6 @@ if (!empty($_POST)){
 			</a>
 		</div>
 	</div>
-
-	<footer>
-		
-	</footer>
-</div>
 	<script src="js/main.js"></script>
 </body>
 </html>
