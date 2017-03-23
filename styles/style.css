@@ -27,7 +27,9 @@ exemple :     class="index-menu-burger" */
 .clearfix:after {
 	clear: both;
 }
-
+.color-red{
+	color: #DE2746;
+}
 
 ul{
 	list-style-type: none;
@@ -115,7 +117,7 @@ header a {
 	position: absolute;
 	width: 100%;
 	left: 50%;
-	top: 55%;
+	top: 45%;
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
 	padding-top: 30px;
@@ -152,6 +154,7 @@ header a {
 .cta {
 	text-align: center;
 	color: white;
+	margin-top: 40px;
 }
 
 .cta a {
@@ -159,7 +162,7 @@ header a {
 	font-size: 20px;
 	width: 100px;
 	border: solid white 1px;
-	padding: 5px 15px;
+	padding: 10px 15px;
 }
 
 .wrapper-popup,
@@ -183,6 +186,9 @@ header a {
 	height: 95vh;
 	padding-top: 60px;
 	font-family: "Helvetica Neue";
+}
+.wrapper-popup>.creat-acc input:nth-of-type(2){
+	margin-bottom: 10px;
 }
 
 .create {
@@ -658,4 +664,103 @@ header.connected a {
 .ranking ul li:nth-child(even){
 	margin: 10px 0;
 }
+
+/* PAGE CONFIGURATION DU VELO */
+body.config{
+	overflow-y: scroll;
+	font-family: 'Fjalla One';
+}
+#unityPlayer{
+	width: 80%;
+	margin: 30px auto;
+	height: 500px;
+}
+body.config header{
+	margin-bottom: 30px;
+}
+body.config h2{
+	text-transform: uppercase;
+	width: 40%;
+	margin: 0 auto 30px;
+	text-align: left;
+	float: left;
+	
+	margin-left: 10%;
+}
+.compteur{
+	
+	display: block;
+	width: 30%;
+	float: right;
+	margin-right: 10%;
+	text-align: right;
+}
+.compteur li{
+	display: inline-block;
+	line-height: 30px;
+}
+.compteur .color-black{
+	color: #222;
+}
+.valid{
+	color: #fff;
+	background: #DE2746;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 90px auto 30px;
+	display: block;
+	width: 200px;
+	letter-spacing: .6px;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer{
+	background: #302F2F;
+}
+footer nav ul li{
+	float: left;
+}
+
+footer nav ul li{
+	width: 20%;
+	text-align: center;
+}
+footer nav ul li a{
+	color: #fff;
+	font-size: 16px;
+	line-height: 60px;
+}
+footer nav ul li:nth-child(2){
+	width: 35%;
+}
+footer nav ul li:nth-child(1){
+	width: 5%;
+	text-align: left;
+}
+footer nav ul li:nth-child(1) a{
+	line-height: 0;
+}
+footer nav ul li:nth-child(1) img{
+	margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
