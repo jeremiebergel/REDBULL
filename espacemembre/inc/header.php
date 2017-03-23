@@ -40,11 +40,11 @@ if (session_status() == PHP_SESSION_NONE){
 
                 <?php if (isset($_SESSION['authentification'])): ?>
 
-              <li><a href="../logout.php">Se Déconnecter</a></li>
+              <li<?=("logout.php")?>><a href="../logout.php">Se Déconnecter</a></li>
               <?php else: ?>
 
-                <li><a href="../register.php">S'inscrire</a></li>
-                <li><a href="../login.php">Se connecter</a></li>
+                <li<?=("register.php")?>><a href="../register.php">S'inscrire</a></li>
+                <li<?=("login.php")?>><a href="../login.php">Se connecter</a></li>
                 <?php endif; ?>
            </ul>
           </div><!--/.nav-collapse -->
